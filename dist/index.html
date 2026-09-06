@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0a1218"><title>Kurothos — Tides of Ruin</title><meta name="description" content="Survive the ruined coast. A pixel-art action roguelike with five survivors, elemental weapons, and permanent character upgrades."><link rel="stylesheet" href="style.css"></head>
+<body>
+<canvas id="world" aria-label="Kurothos battle arena"></canvas>
+<div id="menu" class="screen">
+  <header class="masthead"><div><span class="eyebrow">TIDES OF RUIN</span><h1>KUROTHOS</h1></div><div class="header-right"><span id="wallet" class="wallet"></span><button id="sound" class="icon-button" aria-label="Enable sound">Sound: off</button></div></header>
+  <main class="menu-main"><nav class="tabs" aria-label="Game screens"><button id="venture-tab" class="active">Venture</button><button id="sanctum-tab">Sanctum <span>Permanent upgrades</span></button></nav>
+  <section id="venture"><div class="section-heading"><div><span class="eyebrow">THE RUINED COAST</span><h2>Choose your survivor</h2></div><span class="quiet">One survivor. Fifteen minutes. Naia.</span></div><div id="roster" class="roster"></div><div id="loadout" class="loadout"></div></section>
+  <section id="sanctum" hidden><div class="section-heading"><div><span class="eyebrow">POWER THAT REMAINS</span><h2>The Sanctum</h2></div><span class="quiet">Earn gold in each run. Build each survivor.</span></div><div id="shop-roster" class="shop-roster"></div><div id="shop-content"></div></section>
+  <div id="save-notice" class="notice" role="status"></div>
+  <footer class="menu-footer"><span><kbd>W A S D</kbd> / <kbd>↑ ← ↓ →</kbd> Move <i>·</i> Attacks are automatic <i>·</i> <kbd>ESC</kbd> Pause</span><span id="record"></span></footer></main>
+</div>
+<div id="hud" hidden><div class="hud-top"><div class="vitals"><span id="hud-name"></span><div class="health-track"><div id="health-fill"></div><span id="health-label"></span></div></div><div class="timebox"><strong id="timer">00:00</strong><span id="phase">THE COAST AWAKENS</span></div><div class="hud-tally"><span id="kill-count"></span><span id="run-gold"></span><button id="pause" aria-label="Pause game">Ⅱ</button></div></div><div class="xp-track"><div id="xp-fill"></div><span id="level-label"></span></div><div id="boss-hud" hidden><span id="boss-name"></span><div><i id="boss-fill"></i></div></div><div id="announcement" role="status"></div><div class="hud-bottom"><div id="weapons"></div><span class="quiet">ESC · PAUSE</span></div></div>
+<dialog id="modal"><div id="modal-body"></div></dialog>
+<div id="toast" role="status"></div>
+<script type="module" src="ui.js"></script>
+</body></html>
